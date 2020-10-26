@@ -1,0 +1,352 @@
+return model =
+  name :'RAD Diamond Lancer'
+  designer :'Uranus'
+  level :2
+  model :4
+  size :2
+  specs:
+    shield:
+      capacity :[200,400]
+      reload :[400,400]
+    generator:
+      capacity :[200,200]
+      reload :[19,29]
+    ship:
+      mass :150
+      speed :[250,250]
+      rotation :[70,70]
+      acceleration :[80,80]
+      dash:
+        rate :2
+        burst_speed :[250,250]
+        speed :[300,300]
+        acceleration :[70,70]
+        initial_energy :[50,50]
+        energy :[100,100]
+  bodies:
+    main:
+      section_segments :6
+      offset:
+        x :0
+        y :-50
+        z :0
+      position:
+        x :[0,0,0,0,0,0,0,0]
+        y :[-53,-50,-40,-20,10,40,80,84]
+        z :[0,0,0,0,0,0,0,0]
+      width :[18,25,25,23,23,25,20,0]
+      height :[0,5,10,10,10,10,7,0]
+      texture :[1,1,1,1,1,8,3.9]
+      angle :0
+    bumper:
+      section_segments :6
+      offset:
+        x :-1
+        y :-100
+        z :0
+      position:
+        x :[1.5,1,0,-5,-5,0,0]
+        y :[0,10,15,25,27]
+        z :[0,0,0,0,0,0,0]
+      width :[5,5,5,5,0]
+      height :[5,5,5,5,0]
+      texture :[3.9,16.9,3.9]
+      angle :90
+    cockpitWindshield:
+      section_segments :3
+      offset:
+        x :0
+        y :-40
+        z :10
+      position:
+        x :[-20,0,5,0,-20,0,0]
+        y :[-20,-10,0,10,20]
+        z :[-6,-2,0,-2,-6,0,0]
+      width :[0,12,12,12,0]
+      height :[0,5,5,5,0]
+      texture :[8.6]
+      angle :90
+    cockpitBack:
+      section_segments :6
+      offset:
+        x :0
+        y :10
+        z :7
+      position:
+        x :[0,0,0,0,0,0,0]
+        y :[-50,-20,0,20,23]
+        z :[-2,0,0,0,0,0,0]
+      width :[15,15,15,13,0]
+      height :[0,10,10,10,0]
+      texture :[4,10,17.9,3.9]
+      angle :0
+    cockpitBackSides:
+      section_segments :6
+      offset:
+        x :13
+        y :0
+        z :7
+      position:
+        x :[5,0,0,0,0,0,0]
+        y :[-20,-10,0,3]
+        z :[-3,0,0,0,0,0,0]
+      width :[0,7,7,0]
+      height :[0,5,5,0]
+      texture :[4,17.5,4,3]
+      angle :0
+    enginesTop:
+      section_segments :6
+      offset:
+        x :12
+        y :70
+        z :7
+      position:
+        x :[0,0,0,0,0,0,0,0,0,0]
+        y :[-60,-58,-55,-40,-30,-25,-20,-8,-30]
+        z :[0,0,0,0,0,0,0,0,0,0]
+      width :[0,5,7,7,5,5,8,6,0]
+      height :[0,5,7,7,5,5,8,6,0]
+      texture :[3.9,3.9,10.4,63,2.9,2.9,3.9,16.9]
+      angle :0
+      propeller :true
+    enginesBottom:
+      section_segments :6
+      offset:
+        x :18
+        y :65
+        z :-5
+      position:
+        x :[0,0,0,0,0,0,0,0,0,0]
+        y :[-55,-54,-50,-40,-30,-25,-20,-8,-30]
+        z :[0,0,0,0,0,0,0,0,0,0]
+      width :[0,5,7,7,5,5,8,6,0]
+      height :[0,5,7,7,5,5,8,6,0]
+      texture :[3.9,3.9,17.9,63,2.9,2.9,3.9,16.9]
+      angle :0
+      propeller :true
+    enginesConnect:
+      section_segments :6
+      offset:
+        x :1
+        y :36
+        z :0
+      position:
+        x :[4,-12,0,0,0,0,0]
+        y :[-20,10]
+        z :[-5,8,0,0,0,0,0]
+      width :[2,2]
+      height :[2,2]
+      texture :[1.9]
+      angle :90
+    boostTank:
+      section_segments :12
+      offset:
+        x :0
+        y :-15
+        z :0
+      position:
+        x :[-30,-30,-30,-30,-30,-30,-30,-30,-30,-30]
+        y :[-30,-30,-26,-20,-5,5,20,26,30,30]
+        z :[0,0,0,0,0,0,0,0,0,0,0,0]
+      width :[0,5,7.5,8,8,8,8,7.5,5,0]
+      height :[0,5,7.5,8,8,8,8,7.5,5,0]
+      texture :[63,63,63,13,4,13,63,63,63]
+      angle :0
+    boostTankHolder:
+      section_segments :6
+      angle :90
+      offset:
+        x :0
+        y :-15
+        z :0
+      position:
+        x :[0,0,0,0,0,0,0,0,0,0]
+        y :[-44,-43,-39,-38,0]
+        z :[0,0,0,0,0,0,0,0,0,0]
+      width :[0,6,8,4,4]
+      height :[0,4,6,4,4]
+      texture :[4,63,4,4,4,4,4,63,4]
+    boostPipeMain:
+      section_segments :6
+      offset:
+        x :0
+        y :-20
+        z :11
+      position:
+        x :[-30,-30,-30,-30,-27,-15,-15,0,0]
+        y :[-20,-18,-15,30,35,45,48]
+        z :[-6,-2,0,0,0,0,0,0]
+      width :[2,2,2,2,2,2,0]
+      height :[2,2,2,2,2,2,0]
+      texture :[63]
+      angle :0
+    boostPipeSide:
+      section_segments :6
+      offset:
+        x :0
+        y :-20
+        z :9
+      position:
+        x :[-34,-34,-34,-34,-36,-40,-42,-42,-42]
+        y :[-20,-18,-15,25,30,33,40,46]
+        z :[-6,-2,0,0,0,0,0,0]
+      width :[2,2,2,2,2,2,2,0]
+      height :[2,2,2,2,2,2,2,0]
+      texture :[63]
+      angle :0
+    boostTankEngineHolder:
+      section_segments :6
+      angle :90
+      offset:
+        x :0
+        y :27
+        z :3
+      position:
+        x :[0,0,0,0,10,0,0,0,0]
+        y :[-54,-53,-49,-48,0]
+        z :[0,0,0,0,0,0,0,0,0,0]
+      width :[0,6,8,3,3]
+      height :[0,4,6,3,3]
+      texture :[4,63,4,4,4,4,4,63,4]
+    engineBoostTankOffset:
+      section_segments :6
+      offset:
+        x :0
+        y :70
+        z :3
+      position:
+        x :[-42,-42,-42,-42,-42,-42,-42,-42,-42]
+        y :[-60,-58,-55,-40,-30,-25,-20,-8,-30]
+        z :[0,0,0,0,0,0,0,0,0,0]
+      width :[0,5,7,7,5,5,8,6,0]
+      height :[0,5,7,7,5,5,8,6,0]
+      texture :[3.9,3.9,10.4,63,2.9,2.9,3.9,16.9]
+      angle :0
+      propeller :true
+    logo1:
+      section_segments :4
+      offset:
+        x :0
+        y :-65
+        z :11
+      position:
+        x :[0,0,0,0,0,0,0]
+        y :[0,5]
+        z :[0,0,0,0,0,0,0]
+      width :[0,3.2]
+      height :[0,0]
+      texture :[4,3,4,3]
+      angle :0
+    logo2:
+      section_segments :4
+      offset:
+        x :0.1
+        y :-65
+        z :11
+      position:
+        x :[0,0,0,0,0,0,0]
+        y :[0,5]
+        z :[0,0,0,0,0,0,0]
+      width :[0,3.2]
+      height :[0,0]
+      texture :[4,3,4,3]
+      angle :120
+    logo3:
+      section_segments :4
+      offset:
+        x :0.1
+        y :-65
+        z :11
+      position:
+        x :[0,0,0,0,0,0,0]
+        y :[5,15]
+        z :[0,-3,0,0,0,0,0]
+      width :[3.2,0]
+      height :[0,0]
+      texture :[4]
+      angle :60
+    logo4:
+      section_segments :4
+      offset:
+        x :0
+        y :-65
+        z :11
+      position:
+        x :[0,0,0,0,0,0,0]
+        y :[5,15]
+        z :[0,0,0,0,0,0,0]
+      width :[3.2,0]
+      height :[0,0]
+      texture :[4]
+      angle :180
+    logoDeco:
+      section_segments :4
+      offset:
+        x :5
+        y :-72
+        z :9
+      position:
+        x :[0,0,3,5,8,13,14,15]
+        y :[-20,-10,2,5,8,14,20,26]
+        z :[-4,0,-1,-1,-1,-2,-3,-3,0]
+      width :[3,3,3,3,3,3,2,0,0]
+      height :[2,2,2,2,2,1,0,0]
+      texture :[3.9]
+      angle :0
+  wings:
+    cockpitTop:
+      doubleside :false
+      offset:
+        x :0
+        y :-30
+        z :15
+      length :[10,13]
+      width :[30,20,4]
+      angle :[-11,-42]
+      position :[0,0,11]
+      texture :[11.5,9]
+      bump:
+        position :20
+        size :3
+    cockpitTopBack:
+      doubleside :false
+      offset:
+        x :0
+        y :-17
+        z :14.8
+      length :[10,13]
+      width :[10,10,20]
+      angle :[-11,-42]
+      position :[0,0,10]
+      texture :[4]
+      bump:
+        position :20
+        size :3
+    wingsBackTop:
+      doubleside :true
+      offset:
+        x :14
+        y :37
+        z :10
+      length :[20]
+      width :[20,7]
+      angle :[20]
+      position :[0,20]
+      texture :[63]
+      bump:
+        position :20
+        size :5
+    wingsBackBottom:
+      doubleside :true
+      offset:
+        x :20
+        y :31
+        z :-8
+      length :[30]
+      width :[16,4]
+      angle :[-25]
+      position :[0,20]
+      texture :[63]
+      bump:
+        position :20
+        size :5

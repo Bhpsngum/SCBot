@@ -1,0 +1,11 @@
+{
+  "name": "StarblastConverterBot",
+  "version": "1.0.0",
+  "description": "A bot used for converting Modexport code to ShipEditor Code",
+  "main": "bot.js",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "js2coffee": "^2.2.0",
+    "request": "^2.88.0"
+  }
+}
