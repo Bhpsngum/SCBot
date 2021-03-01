@@ -29,7 +29,7 @@ client.on('ready', () => {
 // Get your bot's secret token from:
 // https://discordapp.com/developers/applications/
 // Click on your application -> Bot -> Token -> "Click to Reveal Token"
-token = ""
+token = "NjY1NTYxNDE1NDQ4MjY0NzE1.XhnaXg.VxP_EmT3Dx6XuCZV934SafVWNrM";
 
 client.login(token);
 client.on('message',function(message) {
@@ -184,6 +184,6 @@ client.on('message',function(message) {
           alert='Invalid convert request!';
       }
     }
-    if (alert!="") message.channel.send(new Discord.RichEmbed().setTitle(title).setDescription(alert+info+msg).setColor(colors[title]));
+    if (alert!="") message.channel.send(new Discord.MessageEmbed().setTitle(title).setDescription(alert+info+msg).setColor(colors[title]));
   }
 });
