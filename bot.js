@@ -29,7 +29,7 @@ client.on('ready', () => {
 // Get your bot's secret token from:
 // https://discordapp.com/developers/applications/
 // Click on your application -> Bot -> Token -> "Click to Reveal Token"
-token = "NjY1NTYxNDE1NDQ4MjY0NzE1.XhnaXg.VxP_EmT3Dx6XuCZV934SafVWNrM";
+token = "<bot token here>";
 
 client.login(token);
 client.on('message',function(message) {
