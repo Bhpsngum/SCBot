@@ -79,14 +79,14 @@ client.on('message',function(message) {
 						switch((cmd.split(' ')[2]||"").toUpperCase())
 						{
 							case "-PR":
-								if (convertauth("","Information",code)==1) message.author.send(new Discord.RichEmbed().setTitle("Converted!").setDescription("**Converted code:**\n```coffeescript\n"+code+"```"+msg).setColor("#00FF00"));
+								if (convertauth("","Information",code)==1) message.author.send(new Discord.MessageEmbed().setTitle("Converted!").setDescription("**Converted code:**\n```coffeescript\n"+code+"```"+msg).setColor("#00FF00"));
 								break;
 							case "-PB":
 								b=1;
-							 	if (convertauth("","Information",code)==1) message.channel.send(new Discord.RichEmbed().setTitle("Converted!").setDescription("**Converted code:**\n```coffeescript\n"+code+"```"+msg).setColor("#00FF00"));
+							 	if (convertauth("","Information",code)==1) message.channel.send(new Discord.MessageEmbed().setTitle("Converted!").setDescription("**Converted code:**\n```coffeescript\n"+code+"```"+msg).setColor("#00FF00"));
 							 break;
 							default:
-							 message.channel.send(new Discord.RichEmbed().setTitle("Information").setDescription("You must define if you want your code to be publicly or privately sent by adding `-pr` (private) or `-pb` (public) after the *<conversion type>* option key\nFor example: `!convert -c -pr <Your code>`"+info+msg).setColor("#0000FF"));
+							 message.channel.send(new Discord.MessageEmbed().setTitle("Information").setDescription("You must define if you want your code to be publicly or privately sent by adding `-pr` (private) or `-pb` (public) after the *<conversion type>* option key\nFor example: `!convert -c -pr <Your code>`"+info+msg).setColor("#0000FF"));
 						}
 						if (b==0)
 						{
@@ -121,7 +121,7 @@ client.on('message',function(message) {
 																		case "-PR":
 																		{
 																			var pre=(convert(content).length<=1940)?(convert(content)):(convert(content).substring(0,1940)+"...");
-			                                message.author.send(new Discord.RichEmbed().setTitle("Converted!").setDescription("**Code Preview:**\n```coffeescript\n"+pre+"```"+msg).setColor("#00FF00"));
+			                                message.author.send(new Discord.MessageEmbed().setTitle("Converted!").setDescription("**Code Preview:**\n```coffeescript\n"+pre+"```"+msg).setColor("#00FF00"));
 																			message.author.send("",{files:["./result.txt"]});
 																		}
 																		break;
@@ -129,12 +129,12 @@ client.on('message',function(message) {
 																		{
 																			b=1;
 																			var pre=(convert(content).length<=1940)?(convert(content)):(convert(content).substring(0,1940)+"...");
-			                                message.channel.send(new Discord.RichEmbed().setTitle("Converted!").setDescription("**Code Preview:**\n```coffeescript\n"+pre+"```"+msg).setColor("#00FF00"));
+			                                message.channel.send(new Discord.MessageEmbed().setTitle("Converted!").setDescription("**Code Preview:**\n```coffeescript\n"+pre+"```"+msg).setColor("#00FF00"));
 																			message.channel.send("",{files:["./result.txt"]});
 																		}
 																		break;
 																		default:
-																			message.channel.send(new Discord.RichEmbed().setTitle("Information").setDescription("You must define if you want your code to be publicly or privately sent by adding `-pr` (private) or `-pb` (public) after the *<conversion type>* option key\nFor example: `!convert -c -pr <Your code>`"+info+msg).setColor("#0000FF"));
+																			message.channel.send(new Discord.MessageEmbed().setTitle("Information").setDescription("You must define if you want your code to be publicly or privately sent by adding `-pr` (private) or `-pb` (public) after the *<conversion type>* option key\nFor example: `!convert -c -pr <Your code>`"+info+msg).setColor("#0000FF"));
 																	}
 	                              }
 	                              else
